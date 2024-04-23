@@ -15,7 +15,12 @@ import java.time.LocalDate;
 @Builder
 
 @Entity
-@Table(name = "TB_PESSOA")
+@Table(name = "TB_PESSOA",
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "UK_PESSOA_EMAIL",
+                        columnNames = {"EMAIL"})
+        })
 public class Pessoa {
 
     @Id

@@ -19,8 +19,8 @@ import java.time.LocalDateTime;
 @Table(name = "TB_CHEFE",
         uniqueConstraints = {
                 @UniqueConstraint(
-                        name = "UK_FIM", columnNames = {"FIM_CHEFE"}
-                )
+                        name = "UK_CHEFE_UNIDADE",
+                        columnNames = {"USUARIO", "UNIDADE", "DT_FIM"})
         })
 public class Chefe {
 
