@@ -20,7 +20,8 @@ import java.time.LocalDateTime;
         uniqueConstraints = {
                 @UniqueConstraint(
                         name = "UK_CHEFE_UNIDADE",
-                        columnNames = {"USUARIO", "UNIDADE", "DT_FIM"})
+                        columnNames = {"USUARIO", "UNIDADE", "FIM_CHEFE"}
+                )
         })
 public class Chefe {
 

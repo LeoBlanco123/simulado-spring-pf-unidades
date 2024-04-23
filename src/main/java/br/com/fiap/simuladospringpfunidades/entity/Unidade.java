@@ -14,9 +14,12 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "TB_UNIDADE",
-    uniqueConstraints = {
-            @UniqueConstraint(name = "UK_SIGLA_UNIDADE", columnNames = {"SIGLA", "MACRO"})
-    })
+        uniqueConstraints = {
+                @UniqueConstraint(
+                        name = "UK_SIGLA_MACRO",
+                        columnNames = {"SIGLA", "MACRO_ID"}
+                )
+        })
 public class Unidade {
 
     @Id
